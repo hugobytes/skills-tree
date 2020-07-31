@@ -1,15 +1,13 @@
 <template>
-  <div class="hello">
-    {{ msg }}
+  <div>
+    <h1>Skills</h1>
+    <input placeholder="Skill name" />
   </div>
 </template>
 
 <script>
 export default {
-  name: "HelloWorld",
-  props: {
-    msg: String,
-  },
+  name: "Skills",
 };
 </script>
 
