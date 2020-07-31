@@ -1,6 +1,7 @@
 <template>
-  <div class="border border-gray-400 rounded mb-3 py-2 px-3">
-    {{ name }}
+  <div class="flex flex-row items-center py-2 px-3">
+    <div class="border border-gray-400 rounded-full p-3 mr-2" />
+    <div class>{{ name }}</div>
   </div>
 </template>
 
