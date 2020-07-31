@@ -1,16 +1,18 @@
 <template>
   <div id="app">
-    <Skills />
+    <div class="container mx-auto max-w-xl mt-6">
+      <Tree />
+    </div>
   </div>
 </template>
 
 <script>
-import Skills from "./components/Skills.vue";
+import Tree from "./components/Tree.vue";
 
 export default {
   name: "App",
   components: {
-    Skills,
+    Tree,
   },
 };
 </script>

@@ -1,13 +1,16 @@
 <template>
-  <div>
-    <h1>Skills</h1>
-    <input placeholder="Skill name" />
+  <div class="border border-gray-400 rounded mb-3 py-2 px-3">
+    {{ name }}
   </div>
 </template>
 
 <script>
 export default {
-  name: "Skills",
+  name: "Skill",
+  props: {
+    name: String,
+    desc: String,
+  },
 };
 </script>
 
