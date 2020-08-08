@@ -20,6 +20,6 @@ export default {
   },
   addSkill({ type, name, desc }) {
     if (this.debug) console.log("skill added triggered");
-    this.state[type] = { name, desc };
+    this.state[type].push({ name, desc });
   },
 };

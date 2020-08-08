@@ -4,10 +4,11 @@
       <input
         class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
         placeholder="Skill name"
+        v-model="name"
       />
       <div class="p-2">
         <button
-          v-on:click="editing = false"
+          v-on:click="addSkill"
           class="bg-blue-500 text-white text-sm py-2 px-4 rounded-full mr-1"
         >Add this skill</button>
         <button
@@ -25,12 +26,23 @@
 </template>
 
 <script>
+import skills_store from "../lib/skills_store";
+
 export default {
   name: "AddSkill",
-  data: () => {
+  data() {
     return {
       editing: false,
     };
+  },
+  methods: {
+    addSkill() {
+      skills_store.addSkill({
+        name: this.name,
+        type: "required",
+        desc: this.desc,
+      });
+    },
   },
 };
 </script>
