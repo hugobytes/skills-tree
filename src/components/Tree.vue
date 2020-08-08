@@ -4,7 +4,7 @@
 
     <section class="mb-16">
       <h2 class="text-xl font-bold underline text-blue-500 mb-2">Required</h2>
-      <div v-for="skill in required" :key="skill.name">
+      <div v-for="skill in sharedState.required" :key="skill.name">
         <Skill :name="skill.name" />
       </div>
       <AddSkill />
@@ -12,7 +12,7 @@
 
     <section class="mb-16">
       <h2 class="text-xl font-bold underline text-blue-500 mb-2">Desired</h2>
-      <div v-for="skill in desired" :key="skill.name">
+      <div v-for="skill in sharedState.desired" :key="skill.name">
         <Skill :name="skill.name" />
       </div>
       <AddSkill />
@@ -23,6 +23,7 @@
 <script>
 import Skill from "./Skill.vue";
 import AddSkill from "./AddSkill.vue";
+import store from "../lib/skills-tree-store";
 
 export default {
   name: "Tree",
@@ -30,26 +31,10 @@ export default {
     Skill,
     AddSkill,
   },
-  data: () => {
-    return {
-      required: [
-        {
-          name: "Accounting",
-          desc: "Great description.",
-        },
-        {
-          name: "Law",
-          desc: "Great description.",
-        },
-      ],
-      desired: [
-        {
-          name: "Marketing",
-          desc: "Great description.",
-        },
-      ],
-    };
-  },
+  data: () => ({
+    privateState: {},
+    sharedState: store.state,
+  }),
 };
 </script>
 
