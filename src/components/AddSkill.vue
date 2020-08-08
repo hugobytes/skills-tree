@@ -3,8 +3,13 @@
     <div v-if="editing">
       <input
         class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
-        placeholder="Skill name"
+        placeholder="Skill (e.g. Accounting, Marketing)"
         v-model="name"
+      />
+      <textarea
+        class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal mt-2"
+        placeholder="Describe this skill..."
+        v-model="desc"
       />
       <div class="p-2">
         <button
@@ -33,6 +38,8 @@ export default {
   data() {
     return {
       editing: false,
+      name: "",
+      desc: "",
     };
   },
   methods: {
@@ -42,6 +49,7 @@ export default {
         type: "required",
         desc: this.desc,
       });
+      (this.name = ""), (this.desc = "");
     },
   },
 };
