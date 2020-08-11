@@ -45,12 +45,14 @@ export default {
   },
   methods: {
     addSkill() {
-      skills_store.addSkill({
-        name: this.name,
-        type: "required",
-        desc: this.desc,
-      });
-      (this.name = ""), (this.desc = "");
+      if (this.name && this.name != "") {
+        skills_store.addSkill({
+          name: this.name,
+          type: "required",
+          desc: this.desc,
+        });
+        (this.name = ""), (this.desc = "");
+      }
     },
   },
 };
