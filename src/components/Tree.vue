@@ -1,18 +1,9 @@
 <template>
   <div>
     <h1 class="text-3xl mb-6">Skills</h1>
-
-    <section class="mb-16">
-      <h2 class="text-xl font-bold underline text-blue-500 mb-2">Required</h2>
-      <div v-for="skill in skills.required" :key="skill.name">
-        <Skill :name="skill.name" />
-      </div>
-      <AddSkill />
-    </section>
-
-    <section class="mb-16">
-      <h2 class="text-xl font-bold underline text-blue-500 mb-2">Desired</h2>
-      <div v-for="skill in skills.desired" :key="skill.name">
+    <section class="mb-16" v-for="group in groups" :key="group.name">
+      <h2 class="text-xl font-bold underline text-blue-500 mb-2">{{group.name}}</h2>
+      <div v-for="skill in group.skills" :key="skill.name">
         <Skill :name="skill.name" />
       </div>
       <AddSkill />
@@ -32,7 +23,7 @@ export default {
     AddSkill,
   },
   data: () => ({
-    skills: skills_store.state,
+    groups: skills_store.state.groups,
   }),
 };
 </script>

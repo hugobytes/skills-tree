@@ -1,26 +1,35 @@
 export default {
   debug: true,
   state: {
-    required: [
+    groups: [
       {
-        name: "Accounting",
-        desc: "Great description.",
+        name: "Required",
+        editable: false,
+        skills: [
+          {
+            name: "Accounting",
+            desc: "Great description.",
+          },
+          {
+            name: "Law",
+            desc: "Great description.",
+          },
+        ],
       },
       {
-        name: "Law",
-        desc: "Great description.",
+        name: "Must have one of",
+        editable: true,
+        skills: [],
       },
-    ],
-    desired: [
       {
-        name: "Marketing",
-        desc: "Great description.",
-      },
-    ],
-    custom_skill_group: [
-      {
-        group_name: "Must have one of",
-        items: [],
+        name: "Desired",
+        editable: false,
+        skills: [
+          {
+            name: "Marketing",
+            desc: "Great description.",
+          },
+        ],
       },
     ],
   },
