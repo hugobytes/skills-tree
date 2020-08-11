@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 class="text-3xl mb-6">Skills</h1>
-    <section class="mb-16" v-for="group in groups" :key="group.name">
+    <section class="mb-16" v-for="group in groups" :key="group.id">
       <h2 class="text-xl font-bold underline text-blue-500 mb-2">{{group.name}}</h2>
       <div v-for="skill in group.skills" :key="skill.name">
         <Skill :name="skill.name" />
@@ -23,7 +23,7 @@ export default {
     AddSkill,
   },
   data: () => ({
-    groups: skills_store.state.groups,
+    groups: skills_store.state,
   }),
 };
 </script>
