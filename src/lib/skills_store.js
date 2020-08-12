@@ -31,8 +31,8 @@ export default {
       ],
     },
   },
-  addSkill({ type, name, desc }) {
+  addSkill({ group_id, name, desc }) {
     if (this.debug) console.log("skill added triggered");
-    this.state[type].skills.push({ name, desc });
+    this.state[group_id].skills.push({ name, desc });
   },
 };

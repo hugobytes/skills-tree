@@ -6,7 +6,7 @@
       <div v-for="skill in group.skills" :key="skill.name">
         <Skill :name="skill.name" />
       </div>
-      <AddSkill />
+      <AddSkill :group_id="group.id" />
     </section>
   </div>
 </template>

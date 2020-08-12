@@ -36,6 +36,9 @@ import skills_store from "../lib/skills_store";
 
 export default {
   name: "AddSkill",
+  props: {
+    group_id: String,
+  },
   data() {
     return {
       editing: false,
@@ -48,7 +51,7 @@ export default {
       if (this.name && this.name != "") {
         skills_store.addSkill({
           name: this.name,
-          type: "required",
+          group_id: this.group_id,
           desc: this.desc,
         });
         (this.name = ""), (this.desc = "");

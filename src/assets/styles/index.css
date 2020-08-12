@@ -5,3 +5,14 @@
 button:focus {
   outline: 0;
 }
+
+.drag-handle {
+  position: absolute;
+  left: 0;
+  top: 0.25em;
+  height: 1.43em;
+  width: 1.43em;
+  background: url(/assets/icons/drag_handle.svg) center center no-repeat;
+  background-size: 1.7rem 0.9rem;
+  cursor: move;
+}
