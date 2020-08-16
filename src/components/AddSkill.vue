@@ -15,18 +15,18 @@
       <div class="p-2">
         <button
           v-on:click="addSkill"
-          class="bg-blue-500 text-white text-sm py-2 px-4 rounded-full mr-1"
+          class="bg-blue-500 text-white text-sm py-2 px-4 rounded-full mr-1 focus:shadow-outline"
         >Add this skill</button>
         <button
           v-on:click="editing = false"
-          class="border border-gray-400 focus:outline-none text-gray-700 text-sm py-2 px-4 rounded-full"
+          class="border border-gray-400 focus:shadow-outline text-gray-700 text-sm py-2 px-4 rounded-full"
         >Cancel</button>
       </div>
     </div>
     <button
       v-else
       v-on:click="editing = true"
-      class="border border-gray-400 focus:outline-none text-gray-700 text-sm py-2 px-4 rounded-full"
+      class="border border-gray-400 focus:shadow-outline text-gray-700 text-sm py-2 px-4 rounded-full"
     >Add a skill</button>
   </div>
 </template>
