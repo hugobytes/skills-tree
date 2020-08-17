@@ -7,7 +7,7 @@
         v-model="name"
       />
       <textarea
-        rows="6"
+        rows="5"
         class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal mt-2"
         placeholder="Describe this skill..."
         v-model="desc"
